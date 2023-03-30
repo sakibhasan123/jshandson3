@@ -1,1 +1,1 @@
-# jshandson3
+# JS Handson 3 (ITERATION STATEMENTS)
