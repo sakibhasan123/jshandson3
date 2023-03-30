@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS HANDSON 3</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+        <h1> JAVASCRIPT Q&A (ITERATION STATEMENTS)</h1>
+
+    <h4><span class="Q">Q1.</span>Find the number of digits </h4>
+    <p> -Take a number from the user and print the count of digits in that number. </p>
+    <h4>Input Format</h4>
+    <p> - The input contains a single number N.</p>
+    <h4>Output Format</h4>
+    <p> -Return the count of digits in the given number. </p>
+    <pre> → Ans const Find_Digits = (N) => 
+        {
+             let ans =0
+             while(N!==0) {
+             ans++;
+              N=Math.floor(N/10);
+             }
+             return ans;
+        };
+         </pre>
+    <hr>
+
+    <h4><span class="Q">Q2.</span>Find the Fives. </h4>
+    <p> - Among all the digits from 0-9, PrepBuddy likes number 5. He has a number and wants you to find out the 
+        number of times 5 occurred in the given number.</p>
+    <h4>Input Format</h4>
+    <p> - The input contains a single number N.</p>
+    <h4>Output Format</h4>
+    <p> - Return the number of fives as the desired output.</p>
+    <pre> → Ansconst Find_Five = (N) => 
+      {
+       let count =0;
+       while (N!==0){
+         let check =N%10;
+         if(check ===5){
+           count++
+         }
+          N=Math.floor(N/10);
+       }
+      return count;
+        };
+                
+ </pre>
+    <hr>
+
+    <h4><span class="Q">Q3.</span>Find Sum </h4>
+    <p> - You are given an integer 
+        N, and your task is to find the sum of all the even integers starting from 1 upto N (N inclusive).</p>
+    <h4>Input Format</h4>
+    <p> - he first and the only line of the input contains an integer N.</p>
+    <h4>Output Format</h4>
+    <p> - Return the sum of all even integers from 1 upto N (N inclusive).</p>
+    <pre> → Ans  const findSum = (n) => {
+        let ans =0;
+        for(i=1; i<=n; i++)
+        {
+          if(i%2===0){
+          ans+= i;
+        }
+        }
+        return  ans;
+        
+    };
+    </pre>
+    <hr>
+
+    <h4><span class="Q">Q4.</span>Find the sum of the digits of a given number. </h4>
+    <p> - Write a program that takes a number from the user and get the sum of the digits present in the number.</p>
+    <h4>Input Format</h4>
+    <p> -The input contains a single number N. </p>
+    <h4>Output Format</h4>
+    <p> - Return the sum of the digits of the number.</p>
+    <pre> → Ans  const Number_Sum = (N) => 
+      {
+         let sum = 0;
+          while (N !== 0) {
+              sum = sum + N % 10;
+              N = parseInt(N / 10);
+          }
+          return sum;
+      };
+      </pre>
+    <hr>
+
+    <h4><span class="Q">Q5.</span> Print the Odds.</h4>
+    <p> - Write a program which takes  a number from user and print all odd numbers in between 2 and N, but print 2
+         first.</p>
+    <h4>Input Format</h4>
+    <p> - The input contains a single number N.</p>
+    <h4>Output Format</h4>
+    <p> - Print the desired output.</p>
+    <pre> → Ans const Print_Odd = (N) => 
+        {
+          console.log(2)
+        let ans =0;
+            for(i=2; i<=N; i++)
+            {
+              if(i%2===1){
+              console.log(i);
+            }
+            }
+            
+            
+        }; </pre>
+    <hr>
+
+    <h4><span class="Q">Q6.</span>Print the Pattern. </h4>
+    <p> - Write a program which ask user for no of lines and print a pattern using an asterik .</p>
+    <h4>Input Format</h4>
+    <p> - The input contains a single number N.</p>
+    <h4>Output Format</h4>
+    <p> - Print the required pattern.</p>
+    <pre> → Ans  
+      const Print_pattern = (N) => 
+{
+   let string="";
+    for(let row=1; row<=N; row++){
+      for(let col=1; col<=row; col++){
+        string+="*";
+      }
+      string+= "\n";
+    }
+    console.log(string);
+}
+
+    </pre>
+    <hr>
+
+    <h4><span class="Q">Q7.</span> Check whether a Number is a prime or not.</h4>
+    <p> - Write a program which takes  a number from user and check whether number is prime number or not a prime 
+        number.</p>
+    <h4>Input Format</h4>
+    <p> - The input contains a single number N.</p>
+    <h4>Output Format</h4>
+    <p> - Return "YES" if the given number is Prime, else print "NO"(without quotes).</p>
+    <pre> → Ans const Prime_Check = (N) => 
+        {
+             let factor = 0
+             for(i=1; i<=N; i++){
+               if(N%i===0){
+                 factor ++;
+               }
+             }
+             
+             if(factor===2){
+               return "YES";
+             }
+             else{
+               return "NO";
+             }
+            
+        }; </pre>
+    <hr>
+
+    <h4><span class="Q">Q8.</span> Print Numbers</h4>
+    <p> - You are given an integer N, and your task is to print all the integers starting from 1 till N (N inclusive).</p>
+    <h4>Input Format</h4>
+    <p> - The first and the only line of the input contains an integer N.</p>
+    <h4>Output Format</h4>
+    <p> -Print all the numbers starting from 1 till N(including N).</p>
+    <pre> → Ans  const printNumbers = (n) => {
+  
+      let ans = "";
+      
+      for(i=1; i<=n; i++){
+       ans+=i+" "
+      }
+      console.log(ans)
+    };
+       
+       </pre>
+    <hr>
+
+    <h4><span class="Q">Q9.</span> Print the Table</h4>
+    <p> - Write a program which takes a number from user and print the table.</p>
+    <h4>Input Format</h4>
+    <p> -The input contains a single number N . </p>
+    <h4>Output Format</h4>
+    <p> - Print the table of the given number.</p>
+    <pre> → Ans  const Print_Table = (N) => 
+      {
+         let n = 3;
+          for (let i = 1; i <= 10; i++)
+              console.log(N + " * " + i +" = " + N * i);
+      };
+      </pre>
+    <hr>
